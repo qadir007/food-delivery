@@ -1,12 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
+import Header from './src/components/Header';
+import { colors } from './src/globle/styles';
+import SignInScreen from './src/screens/AuthScreens/SignInScreen';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+<StatusBar barStyle='light-content' backgroundColor={colors.statusBar} />
+<SignInScreen />
     </View>
   );
 }
@@ -14,8 +16,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
